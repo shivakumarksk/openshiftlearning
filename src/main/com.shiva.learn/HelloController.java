@@ -15,5 +15,12 @@ public class HelloController{
 
       return "snoop";
    }
+   
+   @RequestMapping(value="/hello" method= RequestMethod.GET)
+   public String printHelloagain(ModelMap model) {
+      model.addAttribute("message", "Hello Spring MVC Framework!");
+
+      return "hello";
+   }
 
 }
